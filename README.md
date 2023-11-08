@@ -28,9 +28,35 @@ Este documento fornece uma visão geral de como implementar e testar uma funçã
 
 ## Testando o Endpoint
 
-### Utilizando cURL
+### Endpoint
+endpoint: https://yxwy8cuxr3.execute-api.us-east-1.amazonaws.com/default/Funcao
+### Testes
+#### Mensagens
+```json
+{
+"body": "{\"email\": \" aaa@gmail\", \"kg\": 90, \"apelido\": \"Lil N\"}"
+}
+````
+#### Testes Unitários
+- Autenticação aprovada
+<br><br>
+<img width="658" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/36a39c2a-a1b1-47a0-8591-00a9c5ef2375">
+<br><br>
+- Autenticação rejeitada
+<br><br>
+<img width="572" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/2496a7cb-b88f-4f5e-b6fe-26cf9c680e65">
+<br><br>
+- Autenticação ausente
+<br><br>
+<img width="643" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/16cea17d-df08-45bd-ac1b-36d6ba4f7a9f">
+<br><br>
+- Autenticação aprovada, porém JSON não valido
+<br><br>
 
-Execute o seguinte comando no terminal, substituindo `seu_token_de_autenticacao_real` pelo token de autenticação e `ENDERECO_DO_SEU_ENDPOINT` pelo URL fornecido pelo API Gateway:
-
-```sh
-curl -X POST -H "Authorization: Bearer seu_token_de_autenticacao_real" -d '{ "chave": "valor" }' ENDERECO_DO_SEU_ENDPOINT
+````json
+{
+  "body": "Isso não é um JSON válido"
+}
+````
+<br><br>
+<img width="599" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/14754081-545a-4294-a730-817f02d0b2ab">
