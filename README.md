@@ -48,8 +48,7 @@ endpoint: https://yxwy8cuxr3.execute-api.us-east-1.amazonaws.com/default/Funcao
 <br><br>
 - Autenticação ausente
 <br><br>
-<img width="643" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/16cea17d-df08-45bd-ac1b-36d6ba4f7a9f">
+<img width="643" alt="image" src="https://github.com/MathFidelis/ponderadalambda/blob/main/Screenshot%202023-11-08%20134627.png">
 <br><br>
-- Autenticação aprovada, porém JSON não valido
-<br><br>
+
 
