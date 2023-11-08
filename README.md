@@ -44,7 +44,7 @@ endpoint: https://yxwy8cuxr3.execute-api.us-east-1.amazonaws.com/default/Funcao
 <br><br>
 - Autenticação rejeitada
 <br><br>
-<img width="572" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/2496a7cb-b88f-4f5e-b6fe-26cf9c680e65">
+<img width="572" alt="image" src="https://github.com/MathFidelis/ponderadalambda/blob/main/Screenshot%202023-11-08%20133506.png">
 <br><br>
 - Autenticação ausente
 <br><br>
@@ -53,10 +53,3 @@ endpoint: https://yxwy8cuxr3.execute-api.us-east-1.amazonaws.com/default/Funcao
 - Autenticação aprovada, porém JSON não valido
 <br><br>
 
-````json
-{
-  "body": "Isso não é um JSON válido"
-}
-````
-<br><br>
-<img width="599" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/14754081-545a-4294-a730-817f02d0b2ab">
