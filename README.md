@@ -13,16 +13,6 @@ Este documento fornece uma visão geral de como implementar e testar uma funçã
 
 1. **Código da Função Lambda**: Escreva o código para a função Lambda e salve-o em um arquivo chamado `lambda_function.py`. Certifique-se de que você tenha uma variável de ambiente `AUTH_TOKEN` configurada dentro do seu código:
 
-    ```python
-    import os
-    import json
-
-    auth_token = os.environ['AUTH_TOKEN']
-
-    def lambda_handler(event, context):
-        # Seu código vai aqui
-    ```
-
 2. **Subir para a AWS**:
     - Use o AWS CLI ou a AWS Management Console para criar ou atualizar sua função Lambda com o código acima.
     - Configure a variável de ambiente `AUTH_TOKEN` na seção de configuração de ambiente da função Lambda.
