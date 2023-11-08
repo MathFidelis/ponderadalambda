@@ -40,7 +40,7 @@ endpoint: https://yxwy8cuxr3.execute-api.us-east-1.amazonaws.com/default/Funcao
 #### Testes Unitários
 - Autenticação aprovada
 <br><br>
-<img width="658" alt="image" src="https://github.com/RodrigoMMartins1/ATIVIDADE_PROGRAMACAO_POST/assets/99209230/36a39c2a-a1b1-47a0-8591-00a9c5ef2375">
+<img width="658" alt="image" src="https://github.com/MathFidelis/ponderadalambda/blob/main/Screenshot%202023-11-08%20133022.png">
 <br><br>
 - Autenticação rejeitada
 <br><br>
