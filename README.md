@@ -26,6 +26,50 @@ Este documento fornece uma visão geral de como implementar e testar uma funçã
 3. **Definir Segurança**: Escolha a opção de segurança (para testes iniciais, pode-se optar por nenhuma segurança).
 4. **Deploy**: Crie um novo recurso e método, e faça o deploy da API em um estágio.
 
+## Código
+
+```python
+import json
+import os
+
+# Assume que AUTH_TOKEN está armazenado em uma variável de ambiente por motivos de segurança
+auth_token = 6969
+
+def lambda_handler(event, context):
+    # Inicializa a resposta padrão para token ausente
+    response = {
+        "statusCode": 401,
+        "body": json.dumps({"message": "Authorization token missing"})
+    }
+
+    # Verifica se o cabeçalho 'Authorization' está presente na solicitação
+    token = event['headers'].get('Authorization') if 'headers' in event else None
+    if token:
+        # Verifica se o token é válido
+        if token == f"Bearer {auth_token}":
+            try:
+                # Tenta processar os dados do corpo da solicitação
+                data = json.loads(event.get('body', '{}'))
+                # Resposta de sucesso com os dados processados
+                response = {
+                    "statusCode": 200,
+                    "body": json.dumps({"message": "Data processed successfully", "data": data})
+                }
+            except json.JSONDecodeError:
+                # Erro ao decodificar JSON, retorna erro de solicitação mal formada
+                response = {
+                    "statusCode": 400,
+                    "body": json.dumps({"message": "Invalid JSON format"})
+                }
+        else:
+            # Token inválido
+            response = {
+                "statusCode": 401,
+                "body": json.dumps({"message": "Invalid token"})
+            }
+
+    return response
+
 ## Testando o Endpoint
 
 ### Endpoint
